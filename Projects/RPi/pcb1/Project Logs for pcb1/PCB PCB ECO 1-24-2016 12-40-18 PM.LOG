@@ -1,0 +1,50 @@
+Removed Pin From Net: NetName=VCC Pin=C9-1
+Removed Pin From Net: NetName=F_CS Pin=C16-1
+Removed Pin From Net: NetName=GND Pin=C16-2
+Removed Pin From Net: NetName=5V Pin=C17-1
+Removed Pin From Net: NetName=GND Pin=C17-2
+Removed Pin From Net: NetName=F_CS Pin=J1-2
+Removed Pin From Net: NetName=VCC Pin=J2-2
+Removed Pin From Net: NetName=F_CS Pin=P1-1
+Removed Pin From Net: NetName=5V Pin=P1-2
+Removed Pin From Net: NetName=5V Pin=P1-4
+Removed Pin From Net: NetName=F_CS Pin=P1-17
+Removed Pin From Net: NetName=NetR1_2 Pin=R1-2
+Removed Pin From Net: NetName=GND Pin=VR1-1
+Removed Pin From Net: NetName=F_CS Pin=VR1-2
+Removed Pin From Net: NetName=5V Pin=VR1-3
+Removed Member From Class: ClassName=03 Member=C16
+Removed Member From Class: ClassName=03 Member=C17
+Removed Member From Class: ClassName=03 Member=VR1
+Change Component Comment : Designator=C6 Old Comment=0.1uF New Comment=1uF
+Change Component Comment : Designator=C7 Old Comment=0.1uF New Comment=1uF
+Added Component: Designator=D4(DIOM4336X25N)
+Added Component: Designator=D5(DIOM4336X25N)
+Added Component: Designator=D6(DIOM4336X25N)
+Added Component: Designator=P?(HDR1X3)
+Added Component: Designator=U4(SOT-23-OT5_M)
+Added Pin To Net: NetName=F_CS Pin=C9-1
+Added Pin To Net: NetName=NetR1_2 Pin=D4-1
+Added Pin To Net: NetName=VCC Pin=D5-1
+Added Pin To Net: NetName=5V Pin=D5-2
+Added Pin To Net: NetName=F_CS Pin=D6-2
+Added Pin To Net: NetName=5V Pin=J1-2
+Added Pin To Net: NetName=F_CS Pin=J2-2
+Added Pin To Net: NetName=VCC Pin=P1-2
+Added Pin To Net: NetName=VCC Pin=P1-4
+Added Pin To Net: NetName=5V Pin=P?-1
+Added Pin To Net: NetName=5V Pin=U4-1
+Added Pin To Net: NetName=GND Pin=U4-2
+Added Pin To Net: NetName=5V Pin=U4-3
+Added Pin To Net: NetName=F_CS Pin=U4-5
+Change Net Name : Old Net Name=NetR1_2 New Net Name=NetD4_1
+Change Net Name : Old Net Name=VCC New Net Name=NetD5_1
+Added Pin To Net: NetName=NetD6_1 Pin=D6-1
+Added Pin To Net: NetName=NetD6_1 Pin=P1-1
+Added Pin To Net: NetName=NetD6_1 Pin=P1-17
+Added Net: Name=NetD6_1
+Added Member To Class: ClassName=03 Member=Component D4 B340LB-13-F
+Added Member To Class: ClassName=03 Member=Component D5 B340LB-13-F
+Added Member To Class: ClassName=03 Member=Component D6 B340LB-13-F
+Added Member To Class: ClassName=03 Member=Component P? Header 3
+Added Member To Class: ClassName=03 Member=Component U4 MCP1801T-3302I/OT

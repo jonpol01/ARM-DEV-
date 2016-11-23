@@ -1,0 +1,530 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11/22/2015</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">8:41:51 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc" class="file"><acronym title="C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc">C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">62</td></tr>
+</table>
+</td>
+</table><a name="ID12KQXQSOSIRFMMSAO4WFIXXMCDTMSAK3F35RSECYSRDJRY5CW3FC"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUVSQQIC5WERQK0LALKOH0KVJENTA2140JCCJCQFCNYAXOWHTBEFL">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDHCENRZ1ZU20HS1PPAWCNSELHGJBKW32TW4UILEY5QDYAY0TKJFB">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSC0QGYYDWFWLLTZF3EL10OP42GCBHNKRYF2V3HO4UZYIFNW30JFO">Silk to Silk (Clearance=0.254mm) (Disabled)(All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLMBF3ONLILHAM4IPPCXNCKUYYE1SZAHTIHCNHPGL03RSVUFW31KB">Silk To Solder Mask (Clearance=0.254mm) (Disabled)(IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4RLWWS4TK1AVIUINSXLSUMMUUEJKQEAQ1BLMA0PDUR35NRH2HXCP">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPG1Q5ETT4EK0JGFSU3MN5NFBWDZURVIGHWM5I2I0TEQTKUY5DYBO">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDD3UFIVFLBSJ1EOZ3WDOTQZIN0GGR5BKVAVMZDQVVRF5LAKRP3G">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEYMDWLSAVACOES4E3CNKN3ML1PYR4YVTW1RSIH2PHCRSFQYAZHI">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDD35Q3QFLOB5RK4EQ3YTN5MXAGLQ5QT5HKEPGXFPO4VYMRBNET34O">Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5F30MPLMMJ0XBGLQ00V0GRGU4PUEKUYQKRLFUXI15KBV1U1LQHLC">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFFFVUBEX0SMBXTJOKMRW0UBTKZAONCYFU3XDLKGP0RKGJN1GPRG">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRKQLNHMKLEXLBSCFVF4AUGUVYM31QGPCZYNLOXJ1S5S2OO0TP3ZG">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">26</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLE1RT54OTCZ5DDVDTYSESWROUBCNOCF2E42MZWFC0Y1XSCMD2GIP">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBYUEXAQ53HS2JDPKNGZEZIIZXM3AKV3E4BGYW0GJ2J4MHXJ0JBKD">Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2'))</a></td>
+<td class="column2">31</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">62</td>
+</tr>
+</table><br><a name="IDDHCENRZ1ZU20HS1PPAWCNSELHGJBKW32TW4UILEY5QDYAY0TKJFB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3214.942mil|Location2.X=3270.636mil|Location1.Y=2795.65mil|Location2.Y=2883.587mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3214.942mil|Location2.X=3270.636mil|Location1.Y=2795.65mil|Location2.Y=2883.587mil|Absolute=True">Net Antennae: Via (22.75mm,11mm) from Top Layer to Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID4RLWWS4TK1AVIUINSXLSUMMUUEJKQEAQ1BLMA0PDUR35NRH2HXCP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4156.778mil|Location2.X=4168.028mil|Location1.Y=2762.093mil|Location2.Y=2773.343mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4156.778mil|Location2.X=4168.028mil|Location1.Y=2762.093mil|Location2.Y=2773.343mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad J1-2(47.5mm,9.3mm) on Top Layer And Pad J1-3(47.5mm,10.1mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4156.778mil|Location2.X=4168.028mil|Location1.Y=2793.589mil|Location2.Y=2804.839mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4156.778mil|Location2.X=4168.028mil|Location1.Y=2793.589mil|Location2.Y=2804.839mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad J1-4(47.5mm,10.9mm) on Top Layer And Pad J1-3(47.5mm,10.1mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4156.778mil|Location2.X=4168.028mil|Location1.Y=2825.085mil|Location2.Y=2836.335mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4156.778mil|Location2.X=4168.028mil|Location1.Y=2825.085mil|Location2.Y=2836.335mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad J1-4(47.5mm,10.9mm) on Top Layer And Pad J1-5(47.5mm,11.7mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4156.778mil|Location2.X=4168.028mil|Location1.Y=2730.597mil|Location2.Y=2741.847mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4156.778mil|Location2.X=4168.028mil|Location1.Y=2730.597mil|Location2.Y=2741.847mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad J1-2(47.5mm,9.3mm) on Top Layer And Pad J1-1(47.5mm,8.5mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDRKQLNHMKLEXLBSCFVF4AUGUVYM31QGPCZYNLOXJ1S5S2OO0TP3ZG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3163.666mil|Location2.X=3174.916mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3163.666mil|Location2.X=3174.916mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-47(21.25mm,14.05mm) on Top Layer And Pad U1-48(20.75mm,14.05mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3183.352mil|Location2.X=3194.602mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3183.352mil|Location2.X=3194.602mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-46(21.75mm,14.05mm) on Top Layer And Pad U1-47(21.25mm,14.05mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3222.722mil|Location2.X=3233.972mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3222.722mil|Location2.X=3233.972mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-44(22.75mm,14.05mm) on Top Layer And Pad U1-45(22.25mm,14.05mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3242.407mil|Location2.X=3253.657mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3242.407mil|Location2.X=3253.657mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-43(23.25mm,14.05mm) on Top Layer And Pad U1-44(22.75mm,14.05mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3360.517mil|Location2.X=3371.767mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3360.517mil|Location2.X=3371.767mil|Location1.Y=2903.823mil|Location2.Y=2915.073mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-37(26.25mm,14.05mm) on Top Layer And Pad U1-38(25.75mm,14.05mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2872.328mil|Location2.Y=2883.578mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2872.328mil|Location2.Y=2883.578mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-35(27.55mm,12.25mm) on Top Layer And Pad U1-36(27.55mm,12.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2852.643mil|Location2.Y=2863.893mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2852.643mil|Location2.Y=2863.893mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-34(27.55mm,11.75mm) on Top Layer And Pad U1-35(27.55mm,12.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2832.958mil|Location2.Y=2844.208mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2832.958mil|Location2.Y=2844.208mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-33(27.55mm,11.25mm) on Top Layer And Pad U1-34(27.55mm,11.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2813.273mil|Location2.Y=2824.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2813.273mil|Location2.Y=2824.523mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-32(27.55mm,10.75mm) on Top Layer And Pad U1-33(27.55mm,11.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2793.588mil|Location2.Y=2804.838mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2793.588mil|Location2.Y=2804.838mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-31(27.55mm,10.25mm) on Top Layer And Pad U1-32(27.55mm,10.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2773.903mil|Location2.Y=2785.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2773.903mil|Location2.Y=2785.153mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-30(27.55mm,9.75mm) on Top Layer And Pad U1-31(27.55mm,10.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2754.218mil|Location2.Y=2765.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2754.218mil|Location2.Y=2765.468mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-29(27.55mm,9.25mm) on Top Layer And Pad U1-30(27.55mm,9.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2714.848mil|Location2.Y=2726.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2714.848mil|Location2.Y=2726.098mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-27(27.55mm,8.25mm) on Top Layer And Pad U1-28(27.55mm,8.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2695.162mil|Location2.Y=2706.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2695.162mil|Location2.Y=2706.412mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-26(27.55mm,7.75mm) on Top Layer And Pad U1-27(27.55mm,8.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2675.477mil|Location2.Y=2686.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3392.014mil|Location2.X=3403.264mil|Location1.Y=2675.477mil|Location2.Y=2686.727mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-25(27.55mm,7.25mm) on Top Layer And Pad U1-26(27.55mm,7.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3360.517mil|Location2.X=3371.767mil|Location1.Y=2584.925mil|Location2.Y=2596.175mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3360.517mil|Location2.X=3371.767mil|Location1.Y=2584.925mil|Location2.Y=2596.175mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-23(25.75mm,5.95mm) on Top Layer And Pad U1-24(26.25mm,5.95mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3340.832mil|Location2.X=3352.082mil|Location1.Y=2584.925mil|Location2.Y=2596.175mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3340.832mil|Location2.X=3352.082mil|Location1.Y=2584.925mil|Location2.Y=2596.175mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-22(25.25mm,5.95mm) on Top Layer And Pad U1-23(25.75mm,5.95mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2695.162mil|Location2.Y=2706.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2695.162mil|Location2.Y=2706.412mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-10(19.45mm,8.25mm) on Top Layer And Pad U1-11(19.45mm,7.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2714.848mil|Location2.Y=2726.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2714.848mil|Location2.Y=2726.098mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-9(19.45mm,8.75mm) on Top Layer And Pad U1-10(19.45mm,8.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2734.533mil|Location2.Y=2745.783mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2734.533mil|Location2.Y=2745.783mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-8(19.45mm,9.25mm) on Top Layer And Pad U1-9(19.45mm,8.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2754.218mil|Location2.Y=2765.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2754.218mil|Location2.Y=2765.468mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-7(19.45mm,9.75mm) on Top Layer And Pad U1-8(19.45mm,9.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2773.903mil|Location2.Y=2785.153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2773.903mil|Location2.Y=2785.153mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-6(19.45mm,10.25mm) on Top Layer And Pad U1-7(19.45mm,9.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2793.588mil|Location2.Y=2804.838mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2793.588mil|Location2.Y=2804.838mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-5(19.45mm,10.75mm) on Top Layer And Pad U1-6(19.45mm,10.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2813.273mil|Location2.Y=2824.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2813.273mil|Location2.Y=2824.523mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-4(19.45mm,11.25mm) on Top Layer And Pad U1-5(19.45mm,10.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2852.643mil|Location2.Y=2863.893mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2852.643mil|Location2.Y=2863.893mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-2(19.45mm,12.25mm) on Top Layer And Pad U1-3(19.45mm,11.75mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2872.328mil|Location2.Y=2883.578mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3073.115mil|Location2.X=3084.365mil|Location1.Y=2872.328mil|Location2.Y=2883.578mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad U1-1(19.45mm,12.75mm) on Top Layer And Pad U1-2(19.45mm,12.25mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDBYUEXAQ53HS2JDPKNGZEZIIZXM3AKV3E4BGYW0GJ2J4MHXJ0JBKD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2932.086mil|Location1.Y=0mil|Location2.Y=3108.268mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2932.086mil|Location1.Y=0mil|Location2.Y=3108.268mil|Absolute=True">Room Definition: Between SMT Small Component X1-8MHz (12.5mm,10mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3991.142mil|Location1.Y=0mil|Location2.Y=2961.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3991.142mil|Location1.Y=0mil|Location2.Y=2961.614mil|Absolute=True">Room Definition: Between SMT Small Component U2-LM3480IM3-3.3 (40.25mm,13mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3473.426mil|Location1.Y=0mil|Location2.Y=2985.236mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3473.426mil|Location1.Y=0mil|Location2.Y=2985.236mil|Absolute=True">Room Definition: Between LCC Component U1-STM32F102C8T6 (23.5mm,10mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2455.511mil|Location1.Y=0mil|Location2.Y=2925.197mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2455.511mil|Location1.Y=0mil|Location2.Y=2925.197mil|Absolute=True">Room Definition: Between Small Component P1-Header 3 (1.5mm,7.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3859.252mil|Location1.Y=0mil|Location2.Y=3095.472mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3859.252mil|Location1.Y=0mil|Location2.Y=3095.472mil|Absolute=True">Room Definition: Between SMT Small Component R12-1k (37mm,17.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3603.346mil|Location1.Y=0mil|Location2.Y=2544.292mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3603.346mil|Location1.Y=0mil|Location2.Y=2544.292mil|Absolute=True">Room Definition: Between SMT Small Component R11-100 (30.5mm,3.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2697.834mil|Location1.Y=0mil|Location2.Y=2770.67mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2697.834mil|Location1.Y=0mil|Location2.Y=2770.67mil|Absolute=True">Room Definition: Between SMT Small Component R10-220 (7.5mm,9mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2697.834mil|Location1.Y=0mil|Location2.Y=2859.252mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2697.834mil|Location1.Y=0mil|Location2.Y=2859.252mil|Absolute=True">Room Definition: Between SMT Small Component R9-220 (7.5mm,11.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3603.346mil|Location1.Y=0mil|Location2.Y=2711.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3603.346mil|Location1.Y=0mil|Location2.Y=2711.614mil|Absolute=True">Room Definition: Between SMT Small Component R8-22 (31.25mm,6.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3691.928mil|Location1.Y=0mil|Location2.Y=2711.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3691.928mil|Location1.Y=0mil|Location2.Y=2711.614mil|Absolute=True">Room Definition: Between SMT Small Component R7-22 (33.5mm,6.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4006.89mil|Location1.Y=0mil|Location2.Y=2839.566mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4006.89mil|Location1.Y=0mil|Location2.Y=2839.566mil|Absolute=True">Room Definition: Between SMT Small Component R6-22 (40.75mm,10.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4006.89mil|Location1.Y=0mil|Location2.Y=2760.826mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4006.89mil|Location1.Y=0mil|Location2.Y=2760.826mil|Absolute=True">Room Definition: Between SMT Small Component R5-22 (40.75mm,8.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3258.858mil|Location1.Y=0mil|Location2.Y=2603.346mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3258.858mil|Location1.Y=0mil|Location2.Y=2603.346mil|Absolute=True">Room Definition: Between SMT Small Component R4-4.7k (22.5mm,4mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3317.914mil|Location1.Y=0mil|Location2.Y=2682.086mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3317.914mil|Location1.Y=0mil|Location2.Y=2682.086mil|Absolute=True">Room Definition: Between SMT Small Component R3-4.7k (23.25mm,6.75mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3160.432mil|Location1.Y=0mil|Location2.Y=2869.094mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3160.432mil|Location1.Y=0mil|Location2.Y=2869.094mil|Absolute=True">Room Definition: Between SMT Small Component R2-10k (20mm,10.75mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3032.48mil|Location1.Y=0mil|Location2.Y=3085.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3032.48mil|Location1.Y=0mil|Location2.Y=3085.63mil|Absolute=True">Room Definition: Between SMT Small Component R1-10k (16.75mm,16.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4547.244mil|Location1.Y=0mil|Location2.Y=3021.718mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4547.244mil|Location1.Y=0mil|Location2.Y=3021.718mil|Absolute=True">Room Definition: Between SIP Component J1-67503-1020 (47.5mm,8.5mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2690.944mil|Location1.Y=0mil|Location2.Y=2937.992mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2690.944mil|Location1.Y=0mil|Location2.Y=2937.992mil|Absolute=True">Room Definition: Between SMT Small Component DS3-APG1608SURKC/T (7.5mm,13.5mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2717.52mil|Location1.Y=0mil|Location2.Y=2672.244mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2717.52mil|Location1.Y=0mil|Location2.Y=2672.244mil|Absolute=True">Room Definition: Between SMT Small Component DS2-APG1608SURKC/T (7.5mm,6.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3714.566mil|Location1.Y=0mil|Location2.Y=3085.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3714.566mil|Location1.Y=0mil|Location2.Y=3085.63mil|Absolute=True">Room Definition: Between SMT Small Component DS1-APG1608SURKC/T (33.5mm,17.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3831.692mil|Location1.Y=0mil|Location2.Y=2886.81mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3831.692mil|Location1.Y=0mil|Location2.Y=2886.81mil|Absolute=True">Room Definition: Between SMT Small Component C10-CAP 0.1uF 6.3V 0603(1608) (36.75mm,10.75mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3207.678mil|Location1.Y=0mil|Location2.Y=3107.284mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3207.678mil|Location1.Y=0mil|Location2.Y=3107.284mil|Absolute=True">Room Definition: Between SMT Small Component C9-CAP 0.1uF 6.3V 0603(1608) (20mm,17.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3615.158mil|Location1.Y=0mil|Location2.Y=3014.764mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3615.158mil|Location1.Y=0mil|Location2.Y=3014.764mil|Absolute=True">Room Definition: Between SMT Small Component C8-CAP 0.1uF 6.3V 0603(1608) (31.25mm,14mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3024.606mil|Location1.Y=0mil|Location2.Y=2749.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3024.606mil|Location1.Y=0mil|Location2.Y=2749.016mil|Absolute=True">Room Definition: Between SMT Small Component C7-CAP 0.1uF 6.3V 0603(1608) (16.25mm,7.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3414.37mil|Location1.Y=0mil|Location2.Y=2556.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3414.37mil|Location1.Y=0mil|Location2.Y=2556.102mil|Absolute=True">Room Definition: Between SMT Small Component C6-CAP 0.1uF 6.3V 0603(1608) (25.25mm,3.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3172.244mil|Location1.Y=0mil|Location2.Y=2739.174mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3172.244mil|Location1.Y=0mil|Location2.Y=2739.174mil|Absolute=True">Room Definition: Between SMT Small Component C5-CAP 0.1uF 6.3V 0603(1608) (20mm,7mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4004.922mil|Location1.Y=0mil|Location2.Y=3097.44mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=4004.922mil|Location1.Y=0mil|Location2.Y=3097.44mil|Absolute=True">Room Definition: Between SMT Small Component C4-CAP 0.1uF 6.3V 0603(1608) (40.25mm,17mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3703.74mil|Location1.Y=0mil|Location2.Y=2886.81mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3703.74mil|Location1.Y=0mil|Location2.Y=2886.81mil|Absolute=True">Room Definition: Between SMT Small Component C3-CAP 0.1uF 6.3V 0603(1608) (33.5mm,10.75mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2697.834mil|Location1.Y=0mil|Location2.Y=2534.448mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2697.834mil|Location1.Y=0mil|Location2.Y=2534.448mil|Absolute=True">Room Definition: Between SMT Small Component C2-CAP 6.8uF 6.3V 0603(1608) (7.5mm,3mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2697.834mil|Location1.Y=0mil|Location2.Y=3085.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=2697.834mil|Location1.Y=0mil|Location2.Y=3085.63mil|Absolute=True">Room Definition: Between SMT Small Component C1-CAP 6.8uF 6.3V 0603(1608) (7.5mm,17mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3561.023mil|Location1.Y=0mil|Location2.Y=3148.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=3561.023mil|Location1.Y=0mil|Location2.Y=3148.425mil|Absolute=True">Room Definition: Between Small Component P2-Header 3 (24.5mm,18mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,6 @@
+Change Component Footprint: Designator=USB1 Old Footprint=USB2.5-2H4C New Footprint=USB/SM0.8-6H5
+Added Member To Class: ClassName=03 Member=Component TP3 
+Added Member To Class: ClassName=03 Member=Component TP4 
+Added Member To Class: ClassName=03 Member=Component TP5 
+Added Member To Class: ClassName=03 Member=Component TP6 
+Added Room: Name=03

@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=J5 Old Footprint=MHDR2X13 New Footprint=HDR2X13
+Change Component Footprint: Designator=J6 Old Footprint=MHDR2X13 New Footprint=HDR2X13
+Change Component Comment : Designator=J5 Old Comment=MHDR2X13 New Comment=HDR2X13
+Change Component Comment : Designator=J6 Old Comment=MHDR2X13 New Comment=HDR2X13
+Added Member To Class: ClassName=03 Member=Component TP3 
+Added Member To Class: ClassName=03 Member=Component TP4 
+Added Member To Class: ClassName=03 Member=Component TP5 
+Added Member To Class: ClassName=03 Member=Component TP6 
+Added Room: Name=03

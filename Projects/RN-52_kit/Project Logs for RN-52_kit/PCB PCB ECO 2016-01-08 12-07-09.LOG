@@ -1,0 +1,8 @@
+Added Component: Designator=USB1(USB2.5-2H4)
+Added Pin To Net: NetName=NetR51_1 Pin=USB1-1
+Added Pin To Net: NetName=NetU8_13 Pin=USB1-2
+Added Pin To Net: NetName=NetU8_12 Pin=USB1-3
+Added Pin To Net: NetName=GND Pin=USB1-4
+Added Pin To Net: NetName=GND Pin=USB1-5
+Added Member To Class: ClassName=Sheet1 Member=Component D? LED2
+Added Member To Class: ClassName=Sheet1 Member=Component USB1 USB002

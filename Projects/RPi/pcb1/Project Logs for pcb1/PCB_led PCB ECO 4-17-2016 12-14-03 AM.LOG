@@ -1,0 +1,3 @@
+Added Component: Designator=R10(1608[0603])
+Added Pin To Net: NetName=BOOT Pin=R10-1
+Added Member To Class: ClassName=5v_led_charger Member=Component R10 10k

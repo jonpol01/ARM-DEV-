@@ -1,0 +1,10 @@
+Output: Telesis Netlist
+Type  : TelesisNetlist
+From  : Project [pcb1.PrjPcb]
+   Generated File[Sheet1.NET]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 10:22:05 On 2015/08/27

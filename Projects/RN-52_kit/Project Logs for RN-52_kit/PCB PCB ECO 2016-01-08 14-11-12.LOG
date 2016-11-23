@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=NetU8_41 Pin=U8-41
+Removed Pin From Net: NetName=NetU8_42 Pin=U8-42
+Added Component: Designator=TP1(PAD1)
+Added Component: Designator=TP2(PAD1)
+Added Component: Designator=TP3(PAD1)
+Added Component: Designator=TP4(PAD1)
+Added Pin To Net: NetName=NetU8_40 Pin=TP1-1
+Added Pin To Net: NetName=NetU8_41 Pin=TP2-1
+Added Pin To Net: NetName=NetU8_42 Pin=TP3-1
+Added Pin To Net: NetName=NetU8_43 Pin=TP4-1
+Added Pin To Net: NetName=NetU8_42 Pin=U8-41
+Added Pin To Net: NetName=NetU8_41 Pin=U8-42
+Change Net Name : Old Net Name=NetU8_40 New Net Name=NetTP1_1
+Change Net Name : Old Net Name=NetU8_41 New Net Name=NetTP2_1
+Change Net Name : Old Net Name=NetU8_42 New Net Name=NetTP3_1
+Change Net Name : Old Net Name=NetU8_43 New Net Name=NetTP4_1
+Added Member To Class: ClassName=Sheet1 Member=Component TP1 R-
+Added Member To Class: ClassName=Sheet1 Member=Component TP2 R+
+Added Member To Class: ClassName=Sheet1 Member=Component TP3 L-
+Added Member To Class: ClassName=Sheet1 Member=Component TP4 L+
+Added Room: Name=Sheet1

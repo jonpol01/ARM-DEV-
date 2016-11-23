@@ -1,0 +1,402 @@
+# EESchema Netlist Version 1.1 created  2/20/2012 1:38:42 PM
+(
+ ( /4F3B071B $noname  C11 1_uF {Lib=C}
+  (    1 GND )
+  (    2 +BATT )
+ )
+ ( /4F39B84B $noname  U2 MCP1702 {Lib=MCP1702-SOT89}
+  (    1 GND )
+  (    2 N-000002 )
+  (    3 +3.3V )
+ )
+ ( /4F381C3D $noname  P3 SWD {Lib=CONN_4}
+  (    1 +3.3V )
+  (    2 /PA14 )
+  (    3 GND )
+  (    4 /PA13 )
+ )
+ ( /4F381B8D $noname  P2 Right_DIP_Pins {Lib=CONN_20}
+  (    1 GND )
+  (    2 /PB15 )
+  (    3 /PB14 )
+  (    4 /PB13 )
+  (    5 /PB12 )
+  (    6 /PB11 )
+  (    7 /PB10 )
+  (    8 /PA7 )
+  (    9 /PA6 )
+  (   10 /PA5 )
+  (   11 /PA4 )
+  (   12 /PA3 )
+  (   13 +BATT )
+  (   14 /PA2 )
+  (   15 /PA1 )
+  (   16 /PA0 )
+  (   17 /PB2 )
+  (   18 /PB1 )
+  (   19 /PB0 )
+  (   20 /NRST )
+ )
+ ( /4F381A80 $noname  C10 10_uF {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
+ )
+ ( /4F3819F5 $noname  P1 Left_DIP_Pins {Lib=CONN_20}
+  (    1 N-000002 )
+  (    2 /PA8 )
+  (    3 /PA9 )
+  (    4 /PA10 )
+  (    5 /PA11 )
+  (    6 /PA12 )
+  (    7 /PA13 )
+  (    8 GND )
+  (    9 /PA14 )
+  (   10 /PA15 )
+  (   11 /PB3 )
+  (   12 /PB4 )
+  (   13 /PB5 )
+  (   14 /PB6 )
+  (   15 /PB7 )
+  (   16 /PB8 )
+  (   17 /PB9 )
+  (   18 /PC13 )
+  (   19 /PC14 )
+  (   20 /PC15 )
+ )
+ ( /4F381236 $noname  C9 7_pF {Lib=C}
+  (    1 GND )
+  (    2 /PC15 )
+ )
+ ( /4F38122C $noname  C8 7_pF {Lib=C}
+  (    1 GND )
+  (    2 /PC14 )
+ )
+ ( /4F3486D3 $noname  R1 220 {Lib=R}
+  (    1 N-000030 )
+  (    2 N-000029 )
+ )
+ ( /4F34867A $noname  C7 20_pF {Lib=C}
+  (    1 GND )
+  (    2 N-000030 )
+ )
+ ( /4F348673 $noname  C6 20_pF {Lib=C}
+  (    1 GND )
+  (    2 N-000015 )
+ )
+ ( /4F348497 $noname  C5 100_nF {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
+ )
+ ( /4F348491 $noname  C4 4.7_uF {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
+ )
+ ( /4F34848D $noname  C3 100_nF {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
+ )
+ ( /4F348484 $noname  C2 100_nF {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
+ )
+ ( /4F34839F $noname  C1 100_nF {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
+ )
+ ( /4F34820F $noname  X2 32.768_kHz {Lib=CRYSTAL}
+  (    1 /PC15 )
+  (    2 /PC14 )
+ )
+ ( /4F3481FD $noname  X1 8_MHz,_7_pF {Lib=CRYSTAL}
+  (    1 N-000015 )
+  (    2 N-000030 )
+ )
+ ( /4F3480A4 $noname  U1 STM32F103 {Lib=STM32F103}
+  (    1 +BATT )
+  (    2 /PC13 )
+  (    3 /PC14 )
+  (    4 /PC15 )
+  (    5 N-000015 )
+  (    6 N-000029 )
+  (    7 /NRST )
+  (    8 GND )
+  (    9 +3.3V )
+  (   10 /PA0 )
+  (   11 /PA1 )
+  (   12 /PA2 )
+  (   13 /PA3 )
+  (   14 /PA4 )
+  (   15 /PA5 )
+  (   16 /PA6 )
+  (   17 /PA7 )
+  (   18 /PB0 )
+  (   19 /PB1 )
+  (   20 /PB2 )
+  (   21 /PB10 )
+  (   22 /PB11 )
+  (   23 GND )
+  (   24 +3.3V )
+  (   25 /PB12 )
+  (   26 /PB13 )
+  (   27 /PB14 )
+  (   28 /PB15 )
+  (   29 /PA8 )
+  (   30 /PA9 )
+  (   31 /PA10 )
+  (   32 /PA11 )
+  (   33 /PA12 )
+  (   34 /PA13 )
+  (   35 GND )
+  (   36 +3.3V )
+  (   37 /PA14 )
+  (   38 /PA15 )
+  (   39 /PB3 )
+  (   40 /PB4 )
+  (   41 /PB5 )
+  (   42 /PB6 )
+  (   43 /PB7 )
+  (   44 GND )
+  (   45 /PB8 )
+  (   46 /PB9 )
+  (   47 GND )
+  (   48 +3.3V )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component U2
+ SOT89
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "+3.3V" "+3.3V"
+ C4 1
+ U1 48
+ C1 1
+ U1 24
+ P3 1
+ C5 1
+ U2 3
+ C10 1
+ C2 1
+ U1 9
+ U1 36
+ C3 1
+Net 2 "" ""
+ P1 1
+ U2 2
+Net 3 "/PA8" "PA8"
+ U1 29
+ P1 2
+Net 4 "/PA9" "PA9"
+ U1 30
+ P1 3
+Net 5 "/PA10" "PA10"
+ P1 4
+ U1 31
+Net 6 "/PA11" "PA11"
+ U1 32
+ P1 5
+Net 7 "/PA12" "PA12"
+ U1 33
+ P1 6
+Net 8 "/PA13" "PA13"
+ P1 7
+ U1 34
+ P3 4
+Net 9 "/PA14" "PA14"
+ P1 9
+ P3 2
+ U1 37
+Net 10 "/PB4" "PB4"
+ P1 12
+ U1 40
+Net 11 "/PA3" "PA3"
+ U1 13
+ P2 12
+Net 12 "/PB6" "PB6"
+ U1 42
+ P1 14
+Net 13 "/PB5" "PB5"
+ U1 41
+ P1 13
+Net 14 "/PB7" "PB7"
+ P1 15
+ U1 43
+Net 15 "" ""
+ U1 5
+ C6 2
+ X1 1
+Net 16 "/PB9" "PB9"
+ P1 17
+ U1 46
+Net 17 "/PB3" "PB3"
+ P1 11
+ U1 39
+Net 18 "/PB1" "PB1"
+ U1 19
+ P2 18
+Net 19 "/PA15" "PA15"
+ P1 10
+ U1 38
+Net 20 "/PB15" "PB15"
+ P2 2
+ U1 28
+Net 21 "/PB0" "PB0"
+ U1 18
+ P2 19
+Net 22 "/PB14" "PB14"
+ P2 3
+ U1 27
+Net 23 "/PA7" "PA7"
+ P2 8
+ U1 17
+Net 24 "/PB13" "PB13"
+ U1 26
+ P2 4
+Net 25 "/PA6" "PA6"
+ P2 9
+ U1 16
+Net 26 "/PB12" "PB12"
+ U1 25
+ P2 5
+Net 27 "/PA5" "PA5"
+ P2 10
+ U1 15
+Net 28 "/PA4" "PA4"
+ U1 14
+ P2 11
+Net 29 "" ""
+ U1 6
+ R1 2
+Net 30 "" ""
+ C7 2
+ R1 1
+ X1 2
+Net 31 "/PB2" "PB2"
+ U1 20
+ P2 17
+Net 32 "GND" "GND"
+ C9 1
+ C8 1
+ C11 1
+ C10 2
+ U2 1
+ P2 1
+ P1 8
+ U1 8
+ U1 23
+ P3 3
+ C7 1
+ C5 2
+ C6 1
+ C1 2
+ C2 2
+ C4 2
+ C3 2
+ U1 47
+ U1 35
+ U1 44
+Net 33 "/PA2" "PA2"
+ P2 14
+ U1 12
+Net 34 "/PA1" "PA1"
+ P2 15
+ U1 11
+Net 35 "/NRST" "NRST"
+ P2 20
+ U1 7
+Net 36 "/PC14" "PC14"
+ P1 19
+ X2 2
+ U1 3
+ C8 2
+Net 37 "/PC15" "PC15"
+ X2 1
+ U1 4
+ C9 2
+ P1 20
+Net 38 "/PC13" "PC13"
+ U1 2
+ P1 18
+Net 39 "/PB8" "PB8"
+ P1 16
+ U1 45
+Net 40 "/PA0" "PA0"
+ P2 16
+ U1 10
+Net 41 "/PB10" "PB10"
+ P2 7
+ U1 21
+Net 42 "/PB11" "PB11"
+ U1 22
+ P2 6
+Net 43 "+BATT" "+BATT"
+ C11 2
+ U1 1
+ P2 13
+}
+#End

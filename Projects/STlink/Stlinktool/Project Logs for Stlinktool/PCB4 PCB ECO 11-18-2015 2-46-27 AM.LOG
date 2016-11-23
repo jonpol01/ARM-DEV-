@@ -1,0 +1,19 @@
+Added Component: Designator=C1(CAPC0603(1608)100_M)
+Added Component: Designator=J?(FCI-10057202-R00LF_V)
+Added Component: Designator=P?(HDR1X20)
+Added Component: Designator=P?(HDR1X20)
+Added Component: Designator=R?(RESC0603(1608)_N)
+Added Component: Designator=U?(STM-LQFP48_N)
+Added Component: Designator=U?(SOT-23A-CB3_N)
+Added Component: Designator=U?(STM-LQFP48_N)
+Added Component: Designator=U?(STM-LQFP48_N)
+Added Component: Designator=U?(STM-LQFP48_N)
+Added Component: Designator=X?(ABRA-ABS07-2_V)
+Added Component: Designator=Y?(FOX-FQ5032B_V)
+Added Component: Designator=Y?(FOX-FQ5032B_V)
+Added Pin To Net: NetName=VCC Pin=U?-1
+Added Net: Name=VCC
+Added Class: Name=Sheet2
+Added Class: Name=universal_stm32
+Added Room: Name=Sheet2
+Added Room: Name=universal_stm32

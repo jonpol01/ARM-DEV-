@@ -1,0 +1,5 @@
+Remove Pin=S2-2 From Net=VOL DN
+Remove Pin=S3-2 From Net=VOL UP
+Remove Pin=S4-2 From Net=BTN PRV
+Remove Pin=S5-2 From Net=BTN NXT
+Change Component Footprint: Designator=J3 Old Footprint=HDR1X3 New Footprint=3x 2.5mm pitch Pad

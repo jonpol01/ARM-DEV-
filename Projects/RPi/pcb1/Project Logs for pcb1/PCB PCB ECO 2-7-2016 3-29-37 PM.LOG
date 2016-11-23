@@ -1,0 +1,7 @@
+Change Component Footprint: Designator=LED4 Old Footprint=3.2X1.6X1.1 New Footprint=0603_A
+Change Component Footprint: Designator=LED5 Old Footprint=3.2X1.6X1.1 New Footprint=0603_A
+Change Component Footprint: Designator=LED6 Old Footprint=3.2X1.6X1.1 New Footprint=0603_A
+Added Member To Class: ClassName=03 Member=Component TP3 
+Added Member To Class: ClassName=03 Member=Component TP4 
+Added Member To Class: ClassName=03 Member=Component TP5 
+Added Member To Class: ClassName=03 Member=Component TP6 

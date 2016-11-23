@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=5V Pin=P?-1
+Removed Pin From Net: NetName=5V Pin=R1-1
+Removed Pin From Net: NetName=GND Pin=U1-13
+Change Component Designator: OldDesignator=P? NewDesignator=P5
+Added Pin To Net: NetName=5V Pin=P5-2
+Added Pin To Net: NetName=F_CS Pin=U1-13
+Added Pin To Net: NetName=5V_BATT Pin=P5-1
+Added Net: Name=5V_BATT
+Added Pin To Net: NetName=5V_USB Pin=P5-3
+Added Pin To Net: NetName=5V_USB Pin=R1-1
+Added Net: Name=5V_USB

@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=5V_BATT Pin=D1-1
+Removed Member From Class: ClassName=5v_led_charger Member=D1
+Added Pin To Net: NetName=5V_BATT Pin=D2-2
+Added Pin To Net: NetName=5V_BATT Pin=R1-2
+Change Net Name : Old Net Name=5V_BATT New Net Name=NetD2_2
+Change Net Name : Old Net Name=NetTP1_1 New Net Name=5V_BATT
+Added Room: Name=5v_led_charger

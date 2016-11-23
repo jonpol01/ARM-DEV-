@@ -1,0 +1,6 @@
+Added Component: Designator=TP1(PAD1)
+Added Component: Designator=TP2(PAD1)
+Added Pin To Net: NetName=5V_BATT Pin=TP1-1
+Added Pin To Net: NetName=GND Pin=TP2-1
+Added Member To Class: ClassName=03 Member=Component TP1 5V_BATT
+Added Member To Class: ClassName=03 Member=Component TP2 GND_BATT

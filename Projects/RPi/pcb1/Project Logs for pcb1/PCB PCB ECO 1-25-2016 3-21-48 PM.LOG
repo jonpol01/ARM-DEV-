@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=ARM_VERT Pin=P6-1
+Removed Pin From Net: NetName=ARM_HORIZ Pin=P6-2
+Removed Pin From Net: NetName=UART_TX Pin=P6-3
+Removed Pin From Net: NetName=UART_RX Pin=P6-4
+Added Pin To Net: NetName=ARM_HORIZ Pin=P6-1
+Added Pin To Net: NetName=ARM_VERT Pin=P6-2
+Added Pin To Net: NetName=UART_RX Pin=P6-3
+Added Pin To Net: NetName=UART_TX Pin=P6-4

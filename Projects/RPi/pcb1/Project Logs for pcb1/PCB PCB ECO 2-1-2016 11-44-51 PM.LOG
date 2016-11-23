@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=OSC_OUT2 Pin=X2-1
+Removed Pin From Net: NetName=OSC_IN2 Pin=X2-2
+Added Component: Designator=X2(ABRA-ABMM2-4_V)
+Added Pin To Net: NetName=UART_RX Pin=J5-19
+Added Pin To Net: NetName=UART_TX Pin=J5-20
+Added Pin To Net: NetName=UART_RX Pin=U1-29
+Added Pin To Net: NetName=UART_TX Pin=U1-30
+Added Pin To Net: NetName=OSC_IN2 Pin=X2-1
+Added Pin To Net: NetName=GND Pin=X2-2
+Added Pin To Net: NetName=OSC_OUT2 Pin=X2-3
+Added Pin To Net: NetName=GND Pin=X2-4
+Change Net Name : Old Net Name=UART_RX New Net Name=PB10
+Change Net Name : Old Net Name=UART_TX New Net Name=PB11
+Added Member To Class: ClassName=03 Member=Component D2 B340LB-13-F
+Added Member To Class: ClassName=03 Member=Component D5 B340LB-13-F
+Added Member To Class: ClassName=03 Member=Component TP3 
+Added Member To Class: ClassName=03 Member=Component TP4 
+Added Member To Class: ClassName=03 Member=Component TP5 
+Added Member To Class: ClassName=03 Member=Component X2 ABLS2-4.096MHZ-D4Y-T

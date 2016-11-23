@@ -1,0 +1,12 @@
+Added Component: Designator=TP3(PAD1)
+Added Component: Designator=TP4(PAD1)
+Added Component: Designator=TP5(PAD1)
+Added Component: Designator=TP6(PAD1)
+Added Pin To Net: NetName=NetJ1_3 Pin=TP3-1
+Added Pin To Net: NetName=NetJ1_4 Pin=TP4-1
+Added Pin To Net: NetName=NetJ1_5 Pin=TP5-1
+Added Pin To Net: NetName=NetJ1_6 Pin=TP6-1
+Added Member To Class: ClassName=03 Member=Component TP3 
+Added Member To Class: ClassName=03 Member=Component TP4 
+Added Member To Class: ClassName=03 Member=Component TP5 
+Added Member To Class: ClassName=03 Member=Component TP6 

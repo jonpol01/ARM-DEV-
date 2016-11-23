@@ -1,0 +1,136 @@
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 2/18/2012 5:33:48 PM
+
+BeginCmp
+TimeStamp = /4F34839F;
+Reference = C1;
+ValeurCmp = 100_nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F348484;
+Reference = C2;
+ValeurCmp = 100_nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F34848D;
+Reference = C3;
+ValeurCmp = 100_nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F348491;
+Reference = C4;
+ValeurCmp = 4.7_uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F348497;
+Reference = C5;
+ValeurCmp = 100_nF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F348673;
+Reference = C6;
+ValeurCmp = 20_pF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F34867A;
+Reference = C7;
+ValeurCmp = 20_pF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F38122C;
+Reference = C8;
+ValeurCmp = 7_pF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F381236;
+Reference = C9;
+ValeurCmp = 7_pF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F381A80;
+Reference = C10;
+ValeurCmp = 10_uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F3B071B;
+Reference = C11;
+ValeurCmp = 1_uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F3819F5;
+Reference = P1;
+ValeurCmp = Left_DIP_Pins;
+IdModule  = SIL-20;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F381B8D;
+Reference = P2;
+ValeurCmp = Right_DIP_Pins;
+IdModule  = SIL-20;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F381C3D;
+Reference = P3;
+ValeurCmp = SWD;
+IdModule  = PIN_ARRAY_4x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F3486D3;
+Reference = R1;
+ValeurCmp = 220;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F3480A4;
+Reference = U1;
+ValeurCmp = STM32F103;
+IdModule  = TQFP48_0.5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F39B84B;
+Reference = U2;
+ValeurCmp = MCP1702;
+IdModule  = SOT89_with_jumper;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F3481FD;
+Reference = X1;
+ValeurCmp = 8_MHz,_7_pF;
+IdModule  = HC-49V;
+EndCmp
+
+BeginCmp
+TimeStamp = /4F34820F;
+Reference = X2;
+ValeurCmp = 32.768_kHz;
+IdModule  = Crystal;
+EndCmp
+
+EndListe

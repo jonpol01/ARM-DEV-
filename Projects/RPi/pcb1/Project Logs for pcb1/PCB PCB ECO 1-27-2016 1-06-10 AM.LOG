@@ -1,0 +1,3 @@
+Change Component Comment : Designator=J4 Old Comment=NRF2401 New Comment=OLED
+Added Component: Designator=U?(RN4020 MODULE-24)
+Added Member To Class: ClassName=03 Member=Component U? RN4020 MODULE-24

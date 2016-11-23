@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=ARM_HORIZ Pin=P6-1
+Removed Pin From Net: NetName=ARM_VERT Pin=P6-2
+Removed Pin From Net: NetName=PB10 Pin=P6-3
+Removed Pin From Net: NetName=PB11 Pin=P6-4
+Removed Member From Class: ClassName=03 Member=P6
+Added Member To Class: ClassName=03 Member=Component TP3 
+Added Member To Class: ClassName=03 Member=Component TP4 
+Added Member To Class: ClassName=03 Member=Component TP5 
+Added Member To Class: ClassName=03 Member=Component TP6 
+Added Room: Name=03

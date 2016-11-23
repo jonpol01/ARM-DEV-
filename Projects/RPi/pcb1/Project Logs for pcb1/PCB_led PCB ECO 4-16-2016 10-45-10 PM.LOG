@@ -1,0 +1,14 @@
+Change Component Footprint: Designator=U3 Old Footprint=D8_L New Footprint=D8_L
+Change Component Footprint: Designator=LED2 Old Footprint=KING-0603LED_GREEN_V New Footprint=KING-0603LED_GREEN_V
+Change Component Footprint: Designator=LED3 Old Footprint=KING-0603LED_GREEN_V New Footprint=KING-0603LED_GREEN_V
+Change Component Footprint: Designator=LED4 Old Footprint=KING-0603LED_ORANGE_V New Footprint=KING-0603LED_ORANGE_V
+Change Component Footprint: Designator=LED1 Old Footprint=KING-0603LED_YELLOW_V New Footprint=KING-0603LED_YELLOW_V
+Added Component: Designator=C4(1608[0603])
+Added Component: Designator=S1(TSKB-2JL)
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=NetC4_1 Pin=C4-2
+Added Pin To Net: NetName=GND Pin=S1-1
+Added Pin To Net: NetName=NetC4_1 Pin=S1-2
+Change Net Name : Old Net Name=NetC4_1 New Net Name=NetC4_2
+Added Member To Class: ClassName=5v_led_charger Member=Component C4 100nf
+Added Member To Class: ClassName=5v_led_charger Member=Component S1 TSKB-2JL

@@ -1,0 +1,10 @@
+Added Component: Designator=LED7(0603_A)
+Added Component: Designator=R9(1608[0603])
+Added Pin To Net: NetName=GND Pin=LED7-1
+Added Pin To Net: NetName=5V Pin=R9-2
+Added Member To Class: ClassName=03 Member=Component LED7 GREEN
+Added Member To Class: ClassName=03 Member=Component R9 10K
+Added Member To Class: ClassName=03 Member=Component TP3 
+Added Member To Class: ClassName=03 Member=Component TP4 
+Added Member To Class: ClassName=03 Member=Component TP5 
+Added Member To Class: ClassName=03 Member=Component TP6 

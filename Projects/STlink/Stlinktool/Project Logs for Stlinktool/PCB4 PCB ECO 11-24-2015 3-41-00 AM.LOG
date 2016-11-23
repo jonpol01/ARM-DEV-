@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=NetP2_SWCLK Pin=P2-1
+Added Pin To Net: NetName=NetP2_SWDIO Pin=P2-3
+Change Net Name : Old Net Name=NetP2_SWCLK New Net Name=NetP2_1
+Change Net Name : Old Net Name=NetP2_SWDIO New Net Name=NetP2_3

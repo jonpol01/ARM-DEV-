@@ -1,0 +1,112 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\jonpol\Dropbox\Development\ALTIUM\STlink\Stlinktool\PCB4.PcbDoc
+Date     : 11/22/2015
+Time     : 8:41:51 AM
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+   Violation between Net Antennae: Via (22.75mm,11mm) from Top Layer to Bottom Layer 
+Rule Violations :1
+
+Processing Rule : Silk to Silk (Clearance=0.254mm) (Disabled)(All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.254mm) (Disabled)(IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
+   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad J1-2(47.5mm,9.3mm) on Top Layer And Pad J1-3(47.5mm,10.1mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad J1-4(47.5mm,10.9mm) on Top Layer And Pad J1-3(47.5mm,10.1mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad J1-4(47.5mm,10.9mm) on Top Layer And Pad J1-5(47.5mm,11.7mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad J1-2(47.5mm,9.3mm) on Top Layer And Pad J1-1(47.5mm,8.5mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]
+Rule Violations :4
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0.254mm ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (All),(All)
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-47(21.25mm,14.05mm) on Top Layer And Pad U1-48(20.75mm,14.05mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-46(21.75mm,14.05mm) on Top Layer And Pad U1-47(21.25mm,14.05mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-44(22.75mm,14.05mm) on Top Layer And Pad U1-45(22.25mm,14.05mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-43(23.25mm,14.05mm) on Top Layer And Pad U1-44(22.75mm,14.05mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-37(26.25mm,14.05mm) on Top Layer And Pad U1-38(25.75mm,14.05mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-35(27.55mm,12.25mm) on Top Layer And Pad U1-36(27.55mm,12.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-34(27.55mm,11.75mm) on Top Layer And Pad U1-35(27.55mm,12.25mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-33(27.55mm,11.25mm) on Top Layer And Pad U1-34(27.55mm,11.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-32(27.55mm,10.75mm) on Top Layer And Pad U1-33(27.55mm,11.25mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-31(27.55mm,10.25mm) on Top Layer And Pad U1-32(27.55mm,10.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-30(27.55mm,9.75mm) on Top Layer And Pad U1-31(27.55mm,10.25mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-29(27.55mm,9.25mm) on Top Layer And Pad U1-30(27.55mm,9.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-27(27.55mm,8.25mm) on Top Layer And Pad U1-28(27.55mm,8.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-26(27.55mm,7.75mm) on Top Layer And Pad U1-27(27.55mm,8.25mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-25(27.55mm,7.25mm) on Top Layer And Pad U1-26(27.55mm,7.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-23(25.75mm,5.95mm) on Top Layer And Pad U1-24(26.25mm,5.95mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-22(25.25mm,5.95mm) on Top Layer And Pad U1-23(25.75mm,5.95mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-10(19.45mm,8.25mm) on Top Layer And Pad U1-11(19.45mm,7.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-9(19.45mm,8.75mm) on Top Layer And Pad U1-10(19.45mm,8.25mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-8(19.45mm,9.25mm) on Top Layer And Pad U1-9(19.45mm,8.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-7(19.45mm,9.75mm) on Top Layer And Pad U1-8(19.45mm,9.25mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-6(19.45mm,10.25mm) on Top Layer And Pad U1-7(19.45mm,9.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-5(19.45mm,10.75mm) on Top Layer And Pad U1-6(19.45mm,10.25mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-4(19.45mm,11.25mm) on Top Layer And Pad U1-5(19.45mm,10.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-2(19.45mm,12.25mm) on Top Layer And Pad U1-3(19.45mm,11.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.254mm) Between Pad U1-1(19.45mm,12.75mm) on Top Layer And Pad U1-2(19.45mm,12.25mm) on Top Layer 
+Rule Violations :26
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2'))
+   Violation between Room Definition: Between SMT Small Component X1-8MHz (12.5mm,10mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component U2-LM3480IM3-3.3 (40.25mm,13mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between LCC Component U1-STM32F102C8T6 (23.5mm,10mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between Small Component P1-Header 3 (1.5mm,7.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R12-1k (37mm,17.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R11-100 (30.5mm,3.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R10-220 (7.5mm,9mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R9-220 (7.5mm,11.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R8-22 (31.25mm,6.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R7-22 (33.5mm,6.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R6-22 (40.75mm,10.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R5-22 (40.75mm,8.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R4-4.7k (22.5mm,4mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R3-4.7k (23.25mm,6.75mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R2-10k (20mm,10.75mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component R1-10k (16.75mm,16.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SIP Component J1-67503-1020 (47.5mm,8.5mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component DS3-APG1608SURKC/T (7.5mm,13.5mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component DS2-APG1608SURKC/T (7.5mm,6.75mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component DS1-APG1608SURKC/T (33.5mm,17.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C10-CAP 0.1uF 6.3V 0603(1608) (36.75mm,10.75mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C9-CAP 0.1uF 6.3V 0603(1608) (20mm,17.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C8-CAP 0.1uF 6.3V 0603(1608) (31.25mm,14mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C7-CAP 0.1uF 6.3V 0603(1608) (16.25mm,7.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C6-CAP 0.1uF 6.3V 0603(1608) (25.25mm,3.25mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C5-CAP 0.1uF 6.3V 0603(1608) (20mm,7mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C4-CAP 0.1uF 6.3V 0603(1608) (40.25mm,17mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C3-CAP 0.1uF 6.3V 0603(1608) (33.5mm,10.75mm) on Bottom Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C2-CAP 6.8uF 6.3V 0603(1608) (7.5mm,3mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between SMT Small Component C1-CAP 6.8uF 6.3V 0603(1608) (7.5mm,17mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+   Violation between Room Definition: Between Small Component P2-Header 3 (24.5mm,18mm) on Top Layer And Room Sheet2 (Bounding Region = (0mm, 0mm, 50.8mm, 25.4mm) (InComponentClass('Sheet2')) 
+Rule Violations :31
+
+
+Violations Detected : 62
+Time Elapsed        : 00:00:01

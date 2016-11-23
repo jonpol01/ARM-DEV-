@@ -1,0 +1,9 @@
+Change Component DesignItemId : Designator=J1 Old DesignItemId=CMP-0397-00001-1 New DesignItemId=CMP-0411-00002-1
+Change Component Footprint: Designator=J1 Old Footprint=FCI-10057202-R00LF_V New Footprint=MOLX-67503-1020_V
+Change Component Comment : Designator=J1 Old Comment=10057202-R00LF New Comment=67503-1020
+Added Member To Class: ClassName=Sheet2 Member=Component C1 CAP 6.8uF 6.3V 0603(1608)
+Added Member To Class: ClassName=Sheet2 Member=Component P1 Header 3
+Added Member To Class: ClassName=Sheet2 Member=Component U1 STM32F102C8T6
+Added Member To Class: ClassName=Sheet2 Member=Component U2 LM3480IM3-3.3
+Added Member To Class: ClassName=Sheet2 Member=Component X1 8MHz
+Added Room: Name=Sheet2

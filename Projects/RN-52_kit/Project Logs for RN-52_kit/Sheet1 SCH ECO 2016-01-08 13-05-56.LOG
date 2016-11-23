@@ -1,0 +1,5 @@
+Remove Pin=S2-2 From Net=VOL DN
+Remove Pin=S3-2 From Net=VOL UP
+Remove Pin=S4-2 From Net=BTN PRV
+Remove Pin=S5-2 From Net=BTN NXT
+Change Component Footprint: Designator=USB1 Old Footprint=USB2.5-2H4 New Footprint=USB2.5-2H4C

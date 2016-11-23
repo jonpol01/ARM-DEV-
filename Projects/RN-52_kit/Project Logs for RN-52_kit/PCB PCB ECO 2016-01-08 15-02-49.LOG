@@ -1,0 +1,6 @@
+Change Net Name : Old Net Name=NetU8_12 New Net Name=D_P
+Change Net Name : Old Net Name=NetU8_13 New Net Name=D_N
+Change Net Name : Old Net Name=NetU8_16 New Net Name=BT_P
+Change Net Name : Old Net Name=NetU8_17 New Net Name=BT_N
+Added Differential Pair: Name=BT
+Added Differential Pair: Name=D

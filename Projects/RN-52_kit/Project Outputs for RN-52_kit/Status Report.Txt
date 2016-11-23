@@ -1,0 +1,17 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [RN-52_kit.PrjPcb]
+   Generated File[PCB.GTL]
+   Generated File[PCB.GBL]
+   Generated File[PCB.GM1]
+   Generated File[PCB.GD1]
+   Generated File[PCB.GG1]
+   Generated File[PCB.RUL]
+   Generated File[PCB.EXTREP]
+   Generated File[PCB.REP]
+
+
+Files Generated   : 8
+Documents Printed : 0
+
+Finished Output Generation At 16:56:52 On 2016/01/08

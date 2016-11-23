@@ -1,0 +1,47 @@
+eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 2/22/2012 8:21:00 PM
+
+#Cmp ( order = Reference )
+| C1         100 nF      
+| C2         100 nF      
+| C3         100 nF      
+| C4         4.7 uF      
+| C5         100 nF      
+| C6         20 pF       
+| C7         20 pF       
+| C8         7 pF        
+| C9         7 pF        
+| C10        10 uF       
+| C11        1 uF        
+| P1         Left DIP Pins
+| P2         Right DIP Pins
+| P3         SWD         
+| R1         220         
+| U1         STM32F103   
+| U2         MCP1702     
+| X1         8 MHz, 7 pF 
+| X2         32.768 kHz  
+#End Cmp
+
+#Cmp ( order = Value )
+| 1 uF         C11       
+| 10 uF        C10       
+| 100 nF       C1        
+| 100 nF       C2        
+| 100 nF       C3        
+| 100 nF       C5        
+| 20 pF        C6        
+| 20 pF        C7        
+| 220          R1        
+| 32.768 kHz   X2        
+| 4.7 uF       C4        
+| 7 pF         C8        
+| 7 pF         C9        
+| 8 MHz, 7 pF  X1        
+| Left DIP Pins P1        
+| MCP1702      U2        
+| Right DIP Pins P2        
+| STM32F103    U1        
+| SWD          P3        
+#End Cmp
+
+#End List

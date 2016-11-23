@@ -1,0 +1,41 @@
+Removed Pin From Net: NetName=PC3 Pin=J5-6
+Removed Pin From Net: NetName=PC3 Pin=U1-11
+Change Component Designator: OldDesignator=U? NewDesignator=U5
+Added Component: Designator=TP6(PAD1)
+Added Component: Designator=TP7(PAD1)
+Added Component: Designator=TP8(PAD1)
+Added Component: Designator=TP9(PAD1)
+Added Component: Designator=TP10(PAD1)
+Added Component: Designator=TP11(PAD1)
+Added Pin To Net: NetName=PC3 Pin=TP6-1
+Added Pin To Net: NetName=PC2 Pin=U5-7
+Added Pin To Net: NetName=PC3 Pin=U5-15
+Change Net Name : Old Net Name=PC3 New Net Name=NetTP6_1
+Added Pin To Net: NetName=CMD Pin=J5-6
+Added Pin To Net: NetName=CMD Pin=U1-11
+Added Pin To Net: NetName=CMD Pin=U5-8
+Added Net: Name=CMD
+Added Pin To Net: NetName=NetTP7_1 Pin=TP7-1
+Added Pin To Net: NetName=NetTP7_1 Pin=U5-14
+Added Net: Name=NetTP7_1
+Added Pin To Net: NetName=NetTP8_1 Pin=TP8-1
+Added Pin To Net: NetName=NetTP8_1 Pin=U5-13
+Added Net: Name=NetTP8_1
+Added Pin To Net: NetName=NetTP9_1 Pin=TP9-1
+Added Pin To Net: NetName=NetTP9_1 Pin=U5-19
+Added Net: Name=NetTP9_1
+Added Pin To Net: NetName=NetTP10_1 Pin=TP10-1
+Added Pin To Net: NetName=NetTP10_1 Pin=U5-18
+Added Net: Name=NetTP10_1
+Added Pin To Net: NetName=NetTP11_1 Pin=TP11-1
+Added Pin To Net: NetName=NetTP11_1 Pin=U5-17
+Added Net: Name=NetTP11_1
+Added Member To Class: ClassName=03 Member=Component TP3 
+Added Member To Class: ClassName=03 Member=Component TP4 
+Added Member To Class: ClassName=03 Member=Component TP5 
+Added Member To Class: ClassName=03 Member=Component TP6 
+Added Member To Class: ClassName=03 Member=Component TP7 
+Added Member To Class: ClassName=03 Member=Component TP8 
+Added Member To Class: ClassName=03 Member=Component TP9 
+Added Member To Class: ClassName=03 Member=Component TP10 
+Added Member To Class: ClassName=03 Member=Component TP11 

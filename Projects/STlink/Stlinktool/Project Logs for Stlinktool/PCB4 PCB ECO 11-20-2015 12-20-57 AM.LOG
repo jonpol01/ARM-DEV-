@@ -1,0 +1,45 @@
+Removed Pin From Net: NetName=NetR1_2 Pin=U1-2
+Removed Pin From Net: NetName=NetC1_2 Pin=U1-5
+Removed Pin From Net: NetName=NetC2_2 Pin=U1-6
+Removed Pin From Net: NetName=NetC5_1 Pin=U1-7
+Removed Pin From Net: NetName=NetR3_1 Pin=U1-10
+Removed Pin From Net: NetName=NetR11_2 Pin=U1-25
+Removed Pin From Net: NetName=NetR7_2 Pin=U1-26
+Removed Pin From Net: NetName=NetR8_2 Pin=U1-27
+Removed Pin From Net: NetName=NetR9_2 Pin=U1-30
+Removed Pin From Net: NetName=NetR5_2 Pin=U1-32
+Removed Pin From Net: NetName=NetR6_2 Pin=U1-33
+Removed Pin From Net: NetName=NetP2_3 Pin=U1-34
+Removed Pin From Net: NetName=NetP2_1 Pin=U1-37
+Removed Pin From Net: NetName=GND Pin=U1-44
+Change Component DesignItemId : Designator=U2 Old DesignItemId=CMP-0136-00799-1 New DesignItemId=CMP-0062-02201-2
+Change Component DesignItemId : Designator=U1 Old DesignItemId=CMP-0237-00179-3 New DesignItemId=CMP-0237-00173-2
+Change Component DesignItemId : Designator=X1 Old DesignItemId=CMP-0447-00001-2 New DesignItemId=CMP-0277-00002-1
+Change Component DesignItemId : Designator=P1 Old DesignItemId=Header 20 New DesignItemId=Header 3
+Change Component Footprint: Designator=X1 Old Footprint=ABRA-ABS07-2_V New Footprint=ABRA-ABLS2-2_V
+Change Component Footprint: Designator=P1 Old Footprint=HDR1X20 New Footprint=HDR1X3
+Change Component Footprint: Designator=U2 Old Footprint=SOT-23A-CB3_N New Footprint=MF03A_L
+Change Component Comment : Designator=X1 Old Comment=ABS07-32.768KHz-T New Comment=8MHz
+Change Component Comment : Designator=P1 Old Comment=Header 20 New Comment=Header 3
+Change Component Comment : Designator=U2 Old Comment=MCP1702T-3302E/CB New Comment=LM3480IM3-3.3
+Change Component Comment : Designator=U1 Old Comment=STM32F102C4T6A New Comment=STM32F102C8T6
+Change Component Description : Designator=U1 Old Description=ARM Cortex-M3 32-bit MCU, 16 KB Flash, 4 KB Internal RAM, 37 I/Os, 48-pin LQFP, -40 to 85 degC, Tray New Description=ARM Cortex-M3 32-bit MCU, 64 KB Flash, 10 KB Internal RAM, 37 I/Os, 48-pin LQFP, -40 to 85 degC, Tray
+Added Pin To Net: NetName=NetP2_1 Pin=P2-1
+Added Pin To Net: NetName=GND Pin=P2-2
+Added Pin To Net: NetName=NetP2_3 Pin=P2-3
+Added Pin To Net: NetName=NetR1_2 Pin=U1-2
+Added Pin To Net: NetName=NetC1_2 Pin=U1-5
+Added Pin To Net: NetName=NetC2_2 Pin=U1-6
+Added Pin To Net: NetName=NetC5_1 Pin=U1-7
+Added Pin To Net: NetName=NetR3_1 Pin=U1-10
+Added Pin To Net: NetName=NetR11_2 Pin=U1-25
+Added Pin To Net: NetName=NetR7_2 Pin=U1-26
+Added Pin To Net: NetName=NetR8_2 Pin=U1-27
+Added Pin To Net: NetName=NetR9_2 Pin=U1-30
+Added Pin To Net: NetName=NetR5_2 Pin=U1-32
+Added Pin To Net: NetName=NetR6_2 Pin=U1-33
+Added Pin To Net: NetName=NetP2_3 Pin=U1-34
+Added Pin To Net: NetName=NetP2_1 Pin=U1-37
+Added Pin To Net: NetName=GND Pin=U1-44
+Added Member To Class: ClassName=Sheet2 Member=Component P2 Header 3
+Added Room: Name=Sheet2
